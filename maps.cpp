@@ -21,11 +21,27 @@ int main(){
     for(int i = 0; i<=10; i++){
         mp1.insert({i, i*i*i});
     }
-
+    
     cout<<endl<<"Map Cubes - "<<endl;
     for(auto it : mp1){
         cout<<it.first<<" - "<<it.second<<endl;
     }
+
+    cout<<endl<<"Count - "<<endl;
+    for(auto it : mp1){
+        cout<<it.first<<" - "<<mp1.count(it.first)<<endl;
+    }
+
+    if(mp1.find(11) != mp1.end()){
+        cout<<"True"<<endl;
+    }
+    else{
+        cout<<"False"<<endl;
+    }
+
+    cout<<mp1.empty()<<endl;
+    mp1.clear();
+    cout<<mp1.empty()<<endl;
 
     return 0;
 }
