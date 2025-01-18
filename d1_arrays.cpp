@@ -64,7 +64,7 @@ int main(){
 
     
 
-
+    //Bubble Sort
     int arr[] = {23,  9,  25,  27,  34,  34,  43,  56,  67,  67,  98 }, flag, count = 0;
     int length = sizeof(arr)/sizeof(int), element;
 
@@ -95,6 +95,8 @@ int main(){
         cout<<arr[i]<<"  ";
     }
 
+
+    //Binary Serach
     cout<<endl<<"Enter element to search- ";
     cin>>element;
 
