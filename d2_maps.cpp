@@ -16,6 +16,7 @@ int main(){
     // for(int i=1; i<=mp1.size(); i++){
     //     cout<<i<<" - ";
     //     cout<<mp1[i]<<endl;
+    
     // }
 
     for(int i = 0; i<=10; i++){
