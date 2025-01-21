@@ -32,7 +32,7 @@ int main(){
         cout<<it.first<<" - "<<mp1.count(it.first)<<endl;
     }
 
-    if(mp1.find(11) != mp1.end()){
+    if(mp1.find(10) != mp1.end()){
         cout<<"True"<<endl;
     }
     else{
