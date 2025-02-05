@@ -42,7 +42,7 @@ bool containsDuplicate(vector<int> & nums) {
 int main(){
 
     vector<int> arr = {1,2,3,4,5};
-    cout<<"Vector contains duplicate(0-False / 1-True)- "<<containsDuplicate(arr);
+    cout<<endl<<endl<<"Vector contains duplicate(0-False / 1-True)- "<<containsDuplicate(arr);
 
     return 0;
 }
