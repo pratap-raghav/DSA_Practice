@@ -4,18 +4,15 @@ using namespace std;
 
 int longestConsecutive(vector<int>& nums) {
         set<int> num;
-        int len = INT_MIN, curLen = 0;
+        int len = 0, curLen = 0;
         for(int it : nums){
             num.insert(it);
         }
         int pre = *(num.begin());
-        // cout<<pre;
-
         for(int it : num){
             if(it-1 == pre){
                 curLen++;
                 pre = it;
-                
             }
             else{
                 curLen=1;
@@ -25,11 +22,7 @@ int longestConsecutive(vector<int>& nums) {
                 len = curLen;
             }
         }
-
-        // cout<<len;
-
         return len;
-
 }
 
 int main(){
