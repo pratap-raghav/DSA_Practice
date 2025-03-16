@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {   
-    // bool a = true;
-    // cout << a << "\n";        
-    // cout << std::boolalpha;   
-    // cout << a << "\n";        
-    // cout << std::noboolalpha; 
-    // cout << a;                
+    bool q = true;
+    cout << q << "\n";        
+    cout << std::boolalpha;   
+    cout << q << "\n";        
+    cout << std::noboolalpha; 
+    cout << q << "\n\n\n";                
 
     int a = 26, b = 20;
     bool c = false;
