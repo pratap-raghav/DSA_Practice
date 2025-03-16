@@ -23,16 +23,27 @@ int main()
     cout << std::boolalpha;
     cout << a << " " << b << " " <<c << "\n";  
     cout << std::noboolalpha;
-    cout << a << " " << b << " " <<c << "\n";  
+    cout << a << " " << b << " " <<c << "\n\n\n";  
 
-    cout << std::setw(5);          
-    cout << std::setfill('*');     
-    cout << a << "\n";             
-    cout << std::setw(5);
-    cout << "Hi" << "\n";         
-    cout << std::left;             
-    cout << std::setw(5);
+    cout << std::setw(20);          
+    cout << std::setfill('.');     
+    cout << a << "\n";      
+
+    cout << std::setw(20);
+    cout << "Hi" << "\n";    
+
+    cout << std::setw(20);
+    cout << "Hi" << "\n\n\n";    
+
+    cout << std::left;      
+
+    cout << std::setw(20);
     cout << a << "\n";             
 
+    cout << std::setw(20);
+    cout << "Hi" << "\n";  
+
+    cout << std::setw(20);
+    cout << "Hi" << "\n";  
     return 0;
 }
