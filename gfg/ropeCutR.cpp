@@ -16,6 +16,6 @@ int cutRope(int n, int a, int b, int c, int parts){
 }
 
 int main(){
-    cout<<cutRope(9,2,2,2,1);
+    cout<<cutRope(23,12,9,11,0);
     return 0;
 }
