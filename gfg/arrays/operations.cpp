@@ -12,7 +12,7 @@ int searchElement(int* arr, int n, int element){
 
 int insertElement(int* arr, int n, int size, int element, int index){
     if(n<size){
-        for(int i=n; i>-index; i--){
+        for(int i=n; i>=index; i--){
             arr[i+1]=arr[i];
         }
         arr[index]=element;
@@ -20,6 +20,7 @@ int insertElement(int* arr, int n, int size, int element, int index){
         return n+1;
     }
     cout<<"Array already full, element not added"<<endl;
+    return n;
 }
 
 int deleteElement(int* arr, int element, int n){
