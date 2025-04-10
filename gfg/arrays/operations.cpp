@@ -28,11 +28,20 @@ int deleteElement(int* arr, int element, int n){
         for(int i=index; i<=n; i++){
             arr[i]=arr[i+1];
         }
+        cout<<"Element deleted"<<endl;
         return n-1;
     }
+    cout<<"Element not found"<<endl;
     return n;
 }
 
+void printArray(int* arr, int n){
+    cout<<"Array: ";
+    for(int i=0; i<=n; i++){
+        cout<<arr[i]<<" ";
+    }
+    return;
+}
 
 int main(){
     int arr[] = {1,2,3,4,5,6,7,8,9,0};
