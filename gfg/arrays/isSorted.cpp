@@ -6,11 +6,11 @@ bool isSorted(vector<int> v){
     int cMax = v.at(0);
     for(int i=1; i<size;i++){
         if(cMax>v.at(i)){
-            return 0;
+            return false;
         }
         cMax = v.at(i);
     }
-    return 1;
+    return true;
 }
 
 int main(){
