@@ -5,6 +5,10 @@ int SecondMaxElement(vector <int> v){
     int fmax = INT_MIN, smax = INT_MIN;
 
     int size = v.size();
+    
+    if(size<2)
+        return -1;
+
     for (int i = 0; i < size; i++)
     {
         if(fmax < v.at(i)){
