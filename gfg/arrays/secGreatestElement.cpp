@@ -14,10 +14,7 @@ using namespace std;
 
 int SecondMaxElement(vector<int> &v)
 {
-    int size = v.size();
-//     int smax = -1;
-//     if (size < 2)
-//         return smax;
+    
 
 //     int fmax = maxElement(v);
 //     for (int i = 0; i < size; i++)
@@ -52,15 +49,20 @@ int SecondMaxElement(vector<int> &v)
     // // return res;
     // return smax;
 
-    int fmax = 0, smax = -1;
-    for(int i = 0; i<size; i++){
-        cout<<v.at(i)<<" ";
+    int s = v.size();
+    if (s < 2) return -1;
+    int smax = -1;
+
+    int fmax = 0;
+    for(int i = 1; i<s; i++){
         if(v.at(fmax)<v.at(i)){
             smax = fmax;
             fmax = i;
         }
-        if(v.at(smax) < v.at(i) && v.at(i)<v.at(fmax)){
-            smax = i;
+        else if(v.at(i) != v.at(fmax)){
+            if(smax==-1 || v.at(smax) < v.at(i)){
+                smax = i;
+            }
         }
     }
     return smax;
@@ -69,7 +71,7 @@ int SecondMaxElement(vector<int> &v)
 int main()
 {
     //                0   1   2   3   4    5    6    7    8   9
-    vector<int> v = {1222, 43, 65, 13, 100, -1, -43, 159, 200, 199};
+    vector<int> v = {12, 43, 65, 13, 10, -1, -43, 159, 20, 199};
 
     int maximum = SecondMaxElement(v);
     cout << maximum;
