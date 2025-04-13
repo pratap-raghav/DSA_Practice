@@ -1,4 +1,3 @@
-for (int i = d; i < size; i++)
-    // {
-    //     v[i - d] = v[i];
+int i = loc-1; i<size; i++){
+    //     v[i]=0;
     // }
