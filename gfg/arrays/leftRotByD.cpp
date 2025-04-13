@@ -34,9 +34,31 @@ void printVector(vector<int> &v)
 //     }
 // }
 
+// Approach 2 Auxilary space = Th(1)
+void reverse(vector<int> &v, int start, int end)
+{
+    while (start < end)
+    {
+        int temp = v[start];
+        v[start] = v[end];
+        v[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+void leftRotateByD(vector<int> &v, int d)
+{
+    int size = v.size();
+    reverse(v, 0, d - 1);
+    reverse(v, d, size - 1);
+    reverse(v, 0, size - 1);
+}
+
+
 int main()
 {
-    vector<int> v = {1, 2, 3, 4, 5};
+    vector<int> v = {1, 2, 3, 4, 5, 6};
     printVector(v);
     leftRotateByD(v, 2);
     printVector(v);
