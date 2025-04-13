@@ -35,10 +35,14 @@ int main()
 {
     // vector<int> v = {10, 20, 20, 30, 30, 30, 30, 40};
     vector<int> v = {10, 10, 10};
+
     int size = v.size();
+
     cout << size << endl;
     printVector(v, size);
+
     size = removeDuplicates(v, size);
+    
     cout << size << endl;
     printVector(v, size);
 
