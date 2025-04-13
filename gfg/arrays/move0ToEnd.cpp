@@ -35,7 +35,18 @@ void printVector(vector<int> &v)
 
 // Approach 3(from GFG) Time: O(n), Aux: Th(1)
 void move0ToEnd(vector<int> &v){
-    
+    int size = v.size(), loc = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        if (v[i] != 0)
+        {   
+            int temp = v[loc];
+            v[loc] = v[i];
+            v[i] = temp;
+            loc++;
+        }
+    }
 }
 
 int main()
