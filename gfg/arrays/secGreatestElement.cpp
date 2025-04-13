@@ -70,7 +70,7 @@ int SecondMaxElement(vector<int> &v)
 
 int main()
 {
-    //                0   1   2   3   4    5    6    7    8   9
+    //                0   1   2   3   4   5   6   7    8   9
     vector<int> v = {12, 43, 65, 13, 10, -1, -43, 159, 20, 199};
 
     int maximum = SecondMaxElement(v);
