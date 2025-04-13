@@ -12,7 +12,7 @@ void printVector(vector<int> &v)
     cout << endl;
 }
 
-// // Approach 1 Time: O(n * (no.of 0s)), Aux: Th(1)
+// // Approach 1 Time: O(n * (no.of 0s)), Aux: Th(1) (NOT WORKING...)
 // void move0ToEnd(vector<int> &v)
 // {
 //     int size = v.size(), loc = 0;
@@ -24,6 +24,7 @@ void printVector(vector<int> &v)
 //                 v[j]=v[j+1];
 //             }
 //             v[size-1]=0;
+
 //         }
 //     }
 // }
@@ -49,8 +50,7 @@ void move0ToEnd(vector<int> &v)
 }
 
 
-
-// // Approach 3 (from GFG) Time: O(n), Aux: Th(1)
+// // Approach 3(from GFG) Time: O(n), Aux: Th(1)
 // void move0ToEnd(vector<int> &v){
 //     int size = v.size(), loc = 0;
 
