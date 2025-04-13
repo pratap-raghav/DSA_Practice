@@ -14,22 +14,21 @@ using namespace std;
 
 int SecondMaxElement(vector<int> &v)
 {
-    
 
-//     int fmax = maxElement(v);
-//     for (int i = 0; i < size; i++)
-//     {
-//         if (v.at(i) < fmax)
-//         {
-//             if (smax == -1)
-//                 smax = i;
-//             if (v.at(smax) < v.at(i))
-//             {
-//                 smax = i;
-//             }
-//         }
-//     }
-//     return smax;
+    //     int fmax = maxElement(v);
+    //     for (int i = 0; i < size; i++)
+    //     {
+    //         if (v.at(i) < fmax)
+    //         {
+    //             if (smax == -1)
+    //                 smax = i;
+    //             if (v.at(smax) < v.at(i))
+    //             {
+    //                 smax = i;
+    //             }
+    //         }
+    //     }
+    //     return smax;
 
     // int fmax = INT_MIN, smax = INT_MIN;
     // // int res = -1;
@@ -50,17 +49,22 @@ int SecondMaxElement(vector<int> &v)
     // return smax;
 
     int s = v.size();
-    if (s < 2) return -1;
+    if (s < 2)
+        return -1;
     int smax = -1;
 
     int fmax = 0;
-    for(int i = 1; i<s; i++){
-        if(v.at(fmax)<v.at(i)){
+    for (int i = 1; i < s; i++)
+    {
+        if (v.at(fmax) < v.at(i))
+        {
             smax = fmax;
             fmax = i;
         }
-        else if(v.at(i) != v.at(fmax)){
-            if(smax==-1 || v.at(smax) < v.at(i)){
+        else if (v.at(i) != v.at(fmax))
+        {
+            if (smax == -1 || v.at(smax) < v.at(i))
+            {
                 smax = i;
             }
         }
