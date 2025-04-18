@@ -50,6 +50,7 @@ void reverse(vector<int> &v, int start, int end)
 void leftRotateByD(vector<int> &v, int d)
 {
     int size = v.size();
+    d=d%size;
     reverse(v, 0, d - 1);
     reverse(v, d, size - 1);
     reverse(v, 0, size - 1);
