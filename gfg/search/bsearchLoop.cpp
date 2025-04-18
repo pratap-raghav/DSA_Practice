@@ -26,7 +26,7 @@ int bSearch(vector<int> &v, int element)
 
 int main()
 {
-    vector<int> v = {1,2,3,4,5,6,7,8,9};
-    cout<<bSearch(v,10);
+    vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    cout << bSearch(v, 10);
     return 0;
 }
