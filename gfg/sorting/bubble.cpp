@@ -12,15 +12,17 @@ void printVector(vector<int> &v)
     cout << endl;
 }
 
+// Best bubble sort
 void bubbleSort(vector<int> &v){
 
     int size = v.size();
-    for(int i=0; i<size; i++){
+
+    for(int i=0; i<size-1; i++){
 
         bool flag = false;
 
         for(int j=0; j<size-i-1; j++){
-
+    
             if(v[j]>v[j+1]){
                 flag = true;
                 int temp = v[j];
@@ -28,6 +30,7 @@ void bubbleSort(vector<int> &v){
                 v[j+1] = temp;
             }
         }
+    
         if(flag==false)
             return;
     }
