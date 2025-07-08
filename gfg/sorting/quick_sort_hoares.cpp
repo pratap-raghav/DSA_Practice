@@ -12,30 +12,35 @@ void printVector(vector<int> &v)
     cout << endl;
 }
 
-int lomuto_partition(vector<int> &v, int l, int h)
+int hoares_partition(vector<int> &v, int l, int h)
 {
 
-    int key = v[h];
-    int i = l - 1;
-    for (int j = l; j < h; j++)
+    int key = v[l], i = l - 1, j = h + 1;
+    while (true)
     {
-        if (v[j] < key)
+        do
         {
             i++;
-            swap(v[i], v[j]);
+        } while (v[i] < key);
+        do
+        {
+            j--;
+        } while (v[j] > key);
+        if (i >= j)
+        {
+            return j;
         }
+        swap(v[i], v[j]);
     }
-    swap(v[i + 1], v[h]);
-    return (i + 1);
 }
 
 void quick_sort(vector<int> &v, int l, int h)
 {
     if (l < h)
     {
-        int partition = lomuto_partition(v, l, h);
+        int partition = hoares_partition(v, l, h);
         printVector(v);
-        quick_sort(v, l, partition - 1);
+        quick_sort(v, l, partition);
         quick_sort(v, partition + 1, h);
     }
 }
