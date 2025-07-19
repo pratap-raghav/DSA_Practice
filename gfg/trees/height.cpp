@@ -91,6 +91,16 @@ public:
         preorder(root->left);
         preorder(root->right);
     }
+
+    int height_of_tree(Node *root){
+        if(root != NULL){
+            return max(height_of_tree(root->left), height_of_tree(root->right)) + 1;
+        }
+        else{
+            return 0;
+        }
+    }
+
 };
 
 int main()
@@ -113,6 +123,8 @@ int main()
     cout << "Postorder Traversal: ";
     bt.postorder(root);
     cout << endl;
+
+    cout<<"Height of tree: "<<bt.height_of_tree(root)<<endl;
 
     return 0;
 }
