@@ -136,7 +136,7 @@ int main()
     cout << endl;
 
     cout << "Inorder Interative Traversal: ";
-    bt.inorder(root);
+    bt.inorder_iterative(root);
     cout << endl;
 
     return 0;
